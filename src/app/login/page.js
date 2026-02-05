@@ -14,7 +14,7 @@ export default function Login() {
     setError("");
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/login`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || "https://tinytales.trendline.marketing/api"}/auth/login`, {
         method: "POST",
         headers: { Accept: "application/json" },
         body: new URLSearchParams(form),

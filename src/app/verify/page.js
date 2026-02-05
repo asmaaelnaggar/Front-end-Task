@@ -23,7 +23,7 @@ export default function Verify() {
     }
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/verify-email`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || "https://tinytales.trendline.marketing/api"}/auth/verify-email`, {
         method: "POST",
         headers: { 
           Accept: "application/json",
