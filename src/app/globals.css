@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -22,6 +27,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: poppins, sans-serif;
 }
 
 * {
@@ -33,6 +39,142 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.product-hero{
+   background-image: url("/imgs/ProductDetailsimg.png");
+    background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.our-footer {
+  position: relative;
+  background-image: url("/imgs/footerimg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 80px 120px;
+  height: 323px;
+  color: white; /* text color */
+  height: fit-content;
+    gap: 20px;
+}
+
+.our-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(2, 2, 2, 0.7); /* overlay with 0.8 opacity */
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.our-footer > * {
+  position: relative;
+  /* text color */  
+  z-index: 2; /* make text appear above overlay */
+}
+
+.gray-color {
+  color: #ffffffb3; /* Tailwind's gray-500 */
+}
+
+.send-email-container{
+  width:369px;
+  height: 62px;
+  background:#fff;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.btn-send-email{
+  width: 135px;
+  height: 46px;
+  border-radius: 12px;
+}
+
+.email-input{
+  outline: none;
+}
+
+.scroll-area {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  flex-wrap: nowrap;
+  scrollbar-width: none;
+}
+
+.card-product {
+  width: 288px !important;
+  flex-shrink: 0;
+  height: 384px !important;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .card-product {
+    width: 260px !important;
+    height: 360px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .scroll-section {
+  width: 100%;
+  overflow-x: hidden;
+  padding-right: 36px !important; /* to prevent content from being hidden under scrollbar */
+  padding-left: 36px !important; /* to prevent content from being hidden under scrollbar */
+}
+  
+}
+
+@media (max-width: 500px) {
+  .our-footer {
+  justify-content: center;
+  }
+}
+.product-info {
+  justify-content: space-between;
+  height: 104px;
+}
+
+.img-card-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  background-color: #f3f4f6; /* Tailwind's gray-100 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.header-span {
+  height: 4px;
+}
+
+.scroll-section {
+  width: 100%;
+  overflow-x: hidden;
+  padding-right: 120px; /* to prevent content from being hidden under scrollbar */
+  padding-left: 120px; /* to prevent content from being hidden under scrollbar */
+}
+
+.column-one-footer {
+  width: 250px !important;
 }
 
 @media (prefers-color-scheme: dark) {
